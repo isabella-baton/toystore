@@ -97,7 +97,7 @@
 			<div class="toy-details-container">
 				<div class="toy-image">
 					<!-- Display image of toy with its name as alt text -->
-					<img src="<?= '' ?>" alt="<?= '' ?>">
+					<img src="<?= $toy['imgSrc'] ?>" alt="<?= $toy['toy_name'] ?>">
 				</div>
 
 				<div class="toy-details">
