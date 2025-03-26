@@ -113,13 +113,13 @@
 			        <p><strong>Description:</strong> <?= $toy['description'] ?></p>
 
 			        <!-- Display price of toy -->
-			        <p><strong>Price:</strong> $ <?= '' ?></p>
+			        <p><strong>Price:</strong> $ <?= $toy['price'] ?></p>
 
 			        <!-- Display age range of toy -->
-			        <p><strong>Age Range:</strong> <?= '' ?></p>
+			        <p><strong>Age Range:</strong> <?= $toy['agerange'] ?></p>
 
 			        <!-- Display stock of toy -->
-			        <p><strong>Number In Stock:</strong> <?= '' ?></p>
+			        <p><strong>Number In Stock:</strong> <?= $toy['numinstock'] ?></p>
 
 			        <br />
 
