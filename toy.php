@@ -129,7 +129,8 @@
 			        <p><strong>Name:</strong> <?= $toy['man_name'] ?> </p>
 
 			        <!-- Display address of manufacturer -->
-			        <p><strong>Address:</strong> <?= '' ?></p>
+			        <p><strong>Address:</strong> <?= $toy['Street'] . ', ' . $toy['City'] . ', ' . $toy['State'] . ' ' . $toy['ZipCode'] ?></p>
+					<!-- looked up how to do string concatination -->
 
 			        <!-- Display phone of manufacturer -->
 			        <p><strong>Phone:</strong> <?= $toy['phone'] ?></p>
