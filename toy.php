@@ -17,6 +17,39 @@
 	 		  Retrieve info about toy from the db using provided PDO connection
 	 */
 
+	 function getToy(PDO $pdo, string $id) {
+
+		//sql query (getting all so i can use as)
+		$sql = "SELECT t.toynum,
+					   t.name AS toy_name,
+					   t.manid AS toy_manid,
+					   t.price,
+					   t.agerange,
+					   t.soldytd,
+					   t.numinstock,
+					   t.imgSrc,
+					   t.description,
+					   m.manid AS man_manid,
+					   m.name AS man_name,
+					   m.Street,
+					   m.City,
+					   m.State,
+					   m.ZipCode,
+					   m.phone,
+					   m.contact				   
+			FROM toy t
+			JOIN manuf m ON t.manid = m.manid
+			WHERE toynum= :id;";
+
+		#get the toy using pdo
+		$toy = pdo($pdo, $sql, ['id' => $id])->fetch();
+
+		//return info
+		return $toy;
+	}
+
+	//get toy info
+	$toy = getToy($pdo, $toy_id);
 
 // Closing PHP tag  ?> 
 
