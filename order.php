@@ -11,6 +11,22 @@
 	 		  - Return the order info
 	 */
 
+	 function getInfo(PDO $pdo, string $email, string $order) {
+
+		//sql query (getting all so i can use as)
+		$sql = "SELECT * 				   
+			FROM customer c
+			JOIN orders o ON c.custnum = o.custnum
+			WHERE c.email = :email
+			AND o.ordernum = :order;";
+
+		#get the info using pdo
+		$info = pdo($pdo, $sql, ['email' => $email, 'order' => $order])->fetch();
+
+		//return info
+		return $info;
+	}
+
 	
 	// Check if the request method is POST (i.e, form submitted)
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -25,6 +41,7 @@
 		/*
 		 * TO-DO: Retrieve info about order from the db using provided PDO connection
 		 */
+		$info = getInfo($pdo, $email, $orderNum);
 		
 	}
 // Closing PHP tag  ?> 
@@ -89,14 +106,14 @@
 				  -- TO-DO: Check if variable holding order is not empty. Make sure to replace null with your variable!
 				  -->
 				
-				<?php if (!empty(null)): ?>
+				<?php if (!empty($info)): ?>
 					<div class="order-details">
 
 						<!-- 
 				  		  -- TO DO: Fill in ALL the placeholders for this order from the db
   						  -->
 						<h1>Order Details</h1>
-						<p><strong>Name: </strong> <?= '' ?></p>
+						<p><strong>Name: </strong> <?= $info['cname'] ?></p>
 				        	<p><strong>Username: </strong> <?= '' ?></p>
 				        	<p><strong>Order Number: </strong> <?= '' ?></p>
 				        	<p><strong>Quantity: </strong> <?= '' ?></p>
