@@ -113,7 +113,7 @@
 			        <p><strong>Description:</strong> <?= $toy['description'] ?></p>
 
 			        <!-- Display price of toy -->
-			        <p><strong>Price:</strong> $ <?= $toy['price'] ?></p>
+			        <p><strong>Price:</strong> $<?= $toy['price'] ?></p>
 
 			        <!-- Display age range of toy -->
 			        <p><strong>Age Range:</strong> <?= $toy['agerange'] ?></p>
@@ -126,7 +126,7 @@
 			        <h3>Manufacturer Information</h3>
 
 			        <!-- Display name of manufacturer -->
-			        <p><strong>Name:</strong> <?= '' ?> </p>
+			        <p><strong>Name:</strong> <?= $toy['man_name'] ?> </p>
 
 			        <!-- Display address of manufacturer -->
 			        <p><strong>Address:</strong> <?= '' ?></p>
