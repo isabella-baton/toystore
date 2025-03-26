@@ -114,11 +114,11 @@
   						  -->
 						<h1>Order Details</h1>
 						<p><strong>Name: </strong> <?= $info['cname'] ?></p>
-				        	<p><strong>Username: </strong> <?= '' ?></p>
-				        	<p><strong>Order Number: </strong> <?= '' ?></p>
-				        	<p><strong>Quantity: </strong> <?= '' ?></p>
-				        	<p><strong>Date Ordered: </strong> <?= '' ?></p>
-				        	<p><strong>Delivery Date: </strong> <?= '' ?></p>
+				        	<p><strong>Username: </strong> <?= $info['username'] ?></p>
+				        	<p><strong>Order Number: </strong> <?= $info['ordernum'] ?></p>
+				        	<p><strong>Quantity: </strong> <?= $info['quantity'] ?></p>
+				        	<p><strong>Date Ordered: </strong> <?= $info['date_ordered'] ?></p>
+				        	<p><strong>Delivery Date: </strong> <?= $info['date_deliv'] ?></p>
 				      
 					</div>
 				<?php endif; ?>
