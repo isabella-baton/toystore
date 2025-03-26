@@ -22,14 +22,14 @@
 		//sql query (getting all so i can use as)
 		$sql = "SELECT t.toynum,
 					   t.name AS toy_name,
-					   t.manid,
+					   t.manid AS toy_manid,
 					   t.price,
 					   t.agerange,
 					   t.soldytd,
 					   t.numinstock,
 					   t.imgSrc,
 					   t.description,
-					   m.manid,
+					   m.manid AS man_manid,
 					   m.name AS man_name,
 					   m.Street,
 					   m.City,
@@ -113,7 +113,7 @@
 			        <!-- Display description of toy -->
 			        <p><strong>Description:</strong> <?= $toy['description'] ?></p>
 
-			        <!-- Display price of toy -->
+			        <!-- Display price of toy --> 
 			        <p><strong>Price:</strong> $ <?= $toy['price'] ?></p>
 
 			        <!-- Display age range of toy -->
