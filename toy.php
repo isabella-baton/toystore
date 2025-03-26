@@ -103,14 +103,14 @@
 				<div class="toy-details">
 
 					<!-- Display name of toy -->
-			        <h1><?= '' ?></h1>
+			        <h1><?= $toy['toy_name'] ?></h1>
 
 			        <hr />
 
 			        <h3>Toy Information</h3>
 
 			        <!-- Display description of toy -->
-			        <p><strong>Description:</strong> <?= '' ?></p>
+			        <p><strong>Description:</strong> <?= $toy['description'] ?></p>
 
 			        <!-- Display price of toy -->
 			        <p><strong>Price:</strong> $ <?= '' ?></p>
